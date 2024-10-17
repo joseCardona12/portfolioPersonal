@@ -1,6 +1,8 @@
 import Link from "next/link";
 import "./headerStyles.css";
 import Navbar from "./Navbar/Navbar";
+import { SelectLanguage } from "../atoms";
+
 interface IHeaderProps {}
 export default function Header({}: IHeaderProps): React.ReactNode {
   return (
@@ -15,7 +17,9 @@ export default function Header({}: IHeaderProps): React.ReactNode {
           </Link>
         </div>
         <Navbar />
+
         <div className="nav-logout">
+          <SelectLanguage options={["english", "spanish"]} />
           <div className="logout-image">
             <img src="" alt="" />
           </div>

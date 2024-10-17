@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Footer, Header } from "@/components";
+import { Footer, Header, Contact } from "@/components";
 
 const groteskFontBold = localFont({
   src: "./fonts/Fontspring-DEMO-rocgrotesk-bold.otf",
@@ -28,6 +28,7 @@ export default function RootLayout({
         className={`${groteskFontBold.variable} ${groteskFontLight.variable} antialiased`}
       >
         <Header />
+        <Contact />
         <main className="main">{children}</main>
         <Footer />
       </body>

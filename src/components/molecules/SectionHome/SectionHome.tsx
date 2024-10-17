@@ -81,8 +81,10 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
             alt="image about me"
           />
         </div>
-        {commentData.map((item: IComment) => (
-          <div className={`comment comment-${item.name}`}>{item.icon}</div>
+        {commentData.map((item: IComment, index: number) => (
+          <div key={index} className={`comment comment-${item.name}`}>
+            {item.icon}
+          </div>
         ))}
       </div>
       <ButtonIcon
