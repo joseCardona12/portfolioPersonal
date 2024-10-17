@@ -10,7 +10,7 @@ export class HomeViewController{
             res.json({message: "correct getHomeViewService", homeView}).status(200);
 
         }catch(error:unknown){
-            res.json({message: "Error with the getHomeView"}).status(500);
+            res.json({message: "Error with the getHomeView", data: error}).status(500);
         }
     }
 }

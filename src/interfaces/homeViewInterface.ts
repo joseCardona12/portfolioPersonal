@@ -6,5 +6,5 @@ export interface IHomeView{
 }
 export interface IResponseHomeView{
     message:string,
-    data: IHomeView
+    homeView: IHomeView
 }

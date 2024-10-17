@@ -2,10 +2,10 @@ import { IHomeView } from "../interfaces/homeViewInterface";
 import { injectable } from "tsyringe";
 
 const homeViewInitial: IHomeView = {
-    titleSmall: "Hey, I'm Jose Cardona",
+    titleSmall: "Hey, I am Jose Cardona",
     title: "Designer - Dev FullStack",
     description: "description",
-    urlImage: "/image.png"
+    urlImage: "/images/me.png"
 }
 
 @injectable()

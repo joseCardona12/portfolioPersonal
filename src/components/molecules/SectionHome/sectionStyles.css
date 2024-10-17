@@ -9,3 +9,8 @@
 .section-home > div.home-right{
     width:100%;
 }
+
+.section-home > div.home-left > h2{
+    font-size: 2rem;
+    
+}
