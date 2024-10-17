@@ -1,4 +1,4 @@
 export interface IComment {
   name: string;
-  text: string;
+  icon: React.ReactElement;
 }

@@ -4,6 +4,20 @@ import { IComment, IResponseHomeView } from "@/interfaces";
 import { Button, ButtonIcon, Input } from "@/components/atoms";
 import { MdEdit } from "react-icons/md";
 import { useState } from "react";
+import {
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAdobexd,
+  SiAdobeindesign,
+  SiAdobepremierepro,
+  SiAdobeaftereffects,
+  SiTypescript,
+  SiMysql,
+} from "react-icons/si";
+import { TiVendorMicrosoft } from "react-icons/ti";
+import { FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io5";
+import { RiReactjsLine } from "react-icons/ri";
 
 interface ISectionHomeProps {
   homeViewData: IResponseHomeView;
@@ -18,11 +32,20 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
   const initialTitleSmall: string = ""; // State initial for change
   const [creativeMode, setCreativeMode] = useState<boolean>(false);
   const commentData: IComment[] = [
-    { name: "html", text: "HTML" },
-    { name: "css", text: "CSS" },
-    { name: "js", text: "JavaScript" },
-    { name: "ts", text: "TypeScript" },
-    { name: "react", text: "React" },
+    { name: "illustrator", icon: <SiAdobeillustrator /> },
+    { name: "photoshop", icon: <SiAdobephotoshop /> },
+    { name: "adobeXD", icon: <SiAdobexd /> },
+    { name: "indesign", icon: <SiAdobeindesign /> },
+    { name: "premierPro", icon: <SiAdobepremierepro /> },
+    { name: "afterEffects", icon: <SiAdobeaftereffects /> },
+    { name: "basicOffice", icon: <TiVendorMicrosoft /> },
+    { name: "html", icon: <FaHtml5 /> },
+    { name: "css", icon: <FaCss3Alt /> },
+    { name: "js", icon: <IoLogoJavascript /> },
+    { name: "ts", icon: <SiTypescript /> },
+    { name: "react", icon: <RiReactjsLine /> },
+    { name: "mySQL", icon: <SiMysql /> },
+    { name: "node", icon: <IoLogoNodejs /> },
   ];
 
   const handleClickCreativeMode = (): void => {
@@ -58,8 +81,8 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
             alt="image about me"
           />
         </div>
-        {commentData.map((item: IComment, index: number) => (
-          <div className={`comment comment${index}`}>{item.text}</div>
+        {commentData.map((item: IComment) => (
+          <div className={`comment comment-${item.name}`}>{item.icon}</div>
         ))}
       </div>
       <ButtonIcon
