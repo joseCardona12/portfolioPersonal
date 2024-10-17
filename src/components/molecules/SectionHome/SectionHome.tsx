@@ -18,18 +18,22 @@ import { TiVendorMicrosoft } from "react-icons/ti";
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io5";
 import { RiReactjsLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
+import { useDarkMode } from "@/state-global/darkMode";
 
 interface ISectionHomeProps {
   homeViewData: IResponseHomeView;
 }
 export default function SectionHome({ homeViewData }: ISectionHomeProps) {
+  const router = useRouter();
+  const darkMode = useDarkMode((state) => state.darkMode);
+
   if (!homeViewData || homeViewData.message !== "correct getHomeViewService")
     return null;
   const titleSeparate: string[] = homeViewData.homeView.title.split("-");
   const descripionSeparate: string[] =
     homeViewData.homeView.description.split(".");
 
-  const initialTitleSmall: string = ""; // State initial for change
   const [creativeMode, setCreativeMode] = useState<boolean>(false);
   const commentData: IComment[] = [
     { name: "illustrator", icon: <SiAdobeillustrator /> },
@@ -47,12 +51,15 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
     { name: "mySQL", icon: <SiMysql /> },
     { name: "node", icon: <IoLogoNodejs /> },
   ];
+  const handleClickRedirect = (): void => {
+    router.push("/about");
+  };
 
   const handleClickCreativeMode = (): void => {
     setCreativeMode(!creativeMode);
   };
   return (
-    <section className="section-home">
+    <section className={darkMode ? "dark-mode" : "section-home"}>
       <div className="home-left">
         <h5>{homeViewData.homeView.titleSmall}</h5>
         <h2>
@@ -64,11 +71,7 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
           {descripionSeparate[0]} <br /> {descripionSeparate[1]} <br />{" "}
           {descripionSeparate[2]} <br /> {descripionSeparate[3]}
         </p>
-        <Button
-          text="View projects"
-          color="var(--color-white)"
-          backgroundColor="var(--background-color-black)"
-        />
+        <Button text="View projects" onClick={handleClickRedirect} />
       </div>
       <div className="home-right">
         <div className="right-image">

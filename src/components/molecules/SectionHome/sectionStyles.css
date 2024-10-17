@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-basis: calc(100% / 2);
-  padding: 8rem;
+  padding: 10rem;
   height: 100%;
 }
 
@@ -27,7 +27,6 @@
 }
 /* Styles container right*/
 .section-home > div.home-right {
-  height: 80%;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -85,8 +84,8 @@
 }
 
 .section-home > div.home-right > div.comment-html {
-  top: 8%;
-  right: 8%;
+  top: 10%;
+  right: 2%;
   background-color: var(--color-yelow);
 }
 .section-home > div.home-right > div.comment-html:hover::after {
@@ -94,8 +93,8 @@
 }
 
 .section-home > div.home-right > div.comment-css {
-  top: 19%;
-  right: 2%;
+  top: 20%;
+  right: -5%;
   background-color: var(--color-blue);
 }
 .section-home > div.home-right > div.comment-css:hover::after {
@@ -104,7 +103,7 @@
 
 .section-home > div.home-right > div.comment-js {
   top: 30%;
-  right: -4%;
+  right: -10%;
   background-color: var(--color-yelow);
 }
 .section-home > div.home-right > div.comment-js:hover::after {
@@ -112,15 +111,15 @@
 }
 
 .section-home > div.home-right > div.comment-ts {
-  top: 44%;
-  right: -8%;
+  top: 40%;
+  right: -11%;
   background-color: var(--color-blue-strong);
 }
 .section-home > div.home-right > div.comment-ts:hover::after {
   content: "TypeScript";
 }
 .section-home > div.home-right > div.comment-react {
-  top: 60%;
+  top: 50%;
   right: -9%;
   background-color: var(--color-blue-neon);
 }
@@ -129,7 +128,7 @@
 }
 
 .section-home > div.home-right > div.comment-mySQL {
-  top: 74%;
+  top: 60%;
   right: -8%;
   background-color: var(--color-yelow-strong);
 }
@@ -139,7 +138,7 @@
 }
 
 .section-home > div.home-right > div.comment-node {
-  top: 88%;
+  top: 70%;
   right: -5%;
   background-color: var(--color-green);
 }
@@ -150,7 +149,7 @@
 
 /*Styles for comments  left */
 .section-home > div.home-right > div.comment-illustrator {
-  top: 30%;
+  top: 10%;
   right: 58%;
   background-color: var(--color-brown);
 }
@@ -159,7 +158,7 @@
 }
 
 .section-home > div.home-right > div.comment-photoshop {
-  top: 44%;
+  top: 20%;
   right: 62%;
   background-color: var(--color-blue-dark);
 }
@@ -169,7 +168,7 @@
 }
 
 .section-home > div.home-right > div.comment-adobeXD {
-  top: 58%;
+  top: 30%;
   right: 64%;
   background-color: var(--color-pink-strong);
 }
@@ -179,7 +178,7 @@
 }
 
 .section-home > div.home-right > div.comment-indesign {
-  top: 72%;
+  top: 40%;
   right: 64%;
   background-color: var(--color-brown);
 }
@@ -189,7 +188,7 @@
 }
 
 .section-home > div.home-right > div.comment-premierPro {
-  top: 86%;
+  top: 50%;
   right: 63%;
   background-color: var(--color-pink-strong);
 }
@@ -200,7 +199,7 @@
 }
 
 .section-home > div.home-right > div.comment-afterEffects {
-  top: 100%;
+  top: 60%;
   right: 60%;
   background-color: var(--color-blue-dark);
 }
@@ -211,7 +210,7 @@
 }
 
 .section-home > div.home-right > div.comment-basicOffice {
-  top: 114%;
+  top: 70%;
   right: 54%;
   background-color: var(--color-orange);
 }
