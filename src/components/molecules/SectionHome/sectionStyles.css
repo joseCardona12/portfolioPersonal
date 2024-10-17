@@ -1,0 +1,11 @@
+.section-home{
+    display: flex;
+    align-items: center;
+    flex-basis: calc(100% / 2);
+    height: 100%;
+}
+
+.section-home > div.home-left,
+.section-home > div.home-right{
+    width:100%;
+}

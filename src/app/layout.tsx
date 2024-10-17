@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Footer, Header } from "@/components";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const groteskFontBold = localFont({
+  src: "./fonts/Fontspring-DEMO-rocgrotesk-bold.otf",
+  variable: "--font-grotesk-bold",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const groteskFontLight = localFont({
+  src: "./fonts/Fontspring-DEMO-rocgrotesk-light.otf",
+  variable: "--font-grotesk-light",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${groteskFontBold.variable} ${groteskFontLight.variable} antialiased`}
       >
-        {children}
+        <Header />
+        <main className="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );
