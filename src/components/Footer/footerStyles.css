@@ -1,4 +1,6 @@
-.footer{
-    background-color: red;
-    width: 100%;
+.footer {
+  box-shadow: var(--box-shadow);
+  padding: var(--padding-medium);
+  border-radius: var(--border-radius-small);
+  width: 100%;
 }
