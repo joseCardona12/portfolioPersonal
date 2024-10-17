@@ -1,0 +1,6 @@
+.button{
+    border-radius: calc((var(--border-radius-small) - 0.2rem));
+    padding: var(--padding-small) calc(var(--padding-small) + 0.2rem);
+    border: none;
+    font-family: var(--font-main);
+}

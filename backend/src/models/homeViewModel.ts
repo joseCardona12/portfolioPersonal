@@ -4,8 +4,11 @@ import { injectable } from "tsyringe";
 const homeViewInitial: IHomeView = {
     titleSmall: "Hey, I am Jose Cardona",
     title: "Designer - Dev FullStack",
-    description: "description",
-    urlImage: "/images/me.png"
+    description: `Hi! Welcome to my portfolio featuring academic projects. Explore
+    Web Design: Concepts in Adobe XD.
+    Functional Projects: Built with HTML, CSS, and JavaScript.
+    Driven by Design Thinking for user-focused solutions.`,
+    urlImage: `/images/me.png`
 }
 
 @injectable()
