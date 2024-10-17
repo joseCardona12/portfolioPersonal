@@ -1,3 +1,4 @@
 import Button from "./Button/Button";
 import ButtonIcon from "./ButtonIcon/ButtonIcon";
-export { Button, ButtonIcon };
+import Input from "./Input/Input";
+export { Button, ButtonIcon, Input };

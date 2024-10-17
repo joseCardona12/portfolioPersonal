@@ -1,8 +1,9 @@
 "use client";
 import "./sectionStyles.css";
-import { IResponseHomeView } from "@/interfaces";
-import { Button, ButtonIcon } from "@/components/atoms";
+import { IComment, IResponseHomeView } from "@/interfaces";
+import { Button, ButtonIcon, Input } from "@/components/atoms";
 import { MdEdit } from "react-icons/md";
+import { useState } from "react";
 
 interface ISectionHomeProps {
   homeViewData: IResponseHomeView;
@@ -14,8 +15,18 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
   const descripionSeparate: string[] =
     homeViewData.homeView.description.split(".");
 
+  const initialTitleSmall: string = ""; // State initial for change
+  const [creativeMode, setCreativeMode] = useState<boolean>(false);
+  const commentData: IComment[] = [
+    { name: "html", text: "HTML" },
+    { name: "css", text: "CSS" },
+    { name: "js", text: "JavaScript" },
+    { name: "ts", text: "TypeScript" },
+    { name: "react", text: "React" },
+  ];
+
   const handleClickCreativeMode = (): void => {
-    console.log("click");
+    setCreativeMode(!creativeMode);
   };
   return (
     <section className="section-home">
@@ -47,6 +58,9 @@ export default function SectionHome({ homeViewData }: ISectionHomeProps) {
             alt="image about me"
           />
         </div>
+        {commentData.map((item: IComment, index: number) => (
+          <div className={`comment comment${index}`}>{item.text}</div>
+        ))}
       </div>
       <ButtonIcon
         icon={<MdEdit />}

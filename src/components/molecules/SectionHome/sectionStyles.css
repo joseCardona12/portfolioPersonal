@@ -31,6 +31,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  position: relative;
 }
 
 .section-home > div.home-right > div.right-image {
@@ -41,6 +42,32 @@
 .section-home > div.home-right > div.right-image > img {
   width: 100%;
   animation: moveTopBottom 3s infinite;
+}
+
+/*Styles for comments */
+.section-home > div.home-right > div.comment {
+  box-shadow: var(--box-shadow);
+  padding: var(--padding-small);
+  border-radius: var(--padding-small);
+  position: absolute;
+}
+.section-home > div.home-right > div.comment1 {
+  top: 20%;
+  right: -5%;
+}
+
+.section-home > div.home-right > div.comment2 {
+  top: 34%;
+  right: -15%;
+}
+
+.section-home > div.home-right > div.comment3 {
+  top: 48%;
+  right: -18%;
+}
+.section-home > div.home-right > div.comment4 {
+  top: 62%;
+  right: -13%;
 }
 
 @keyframes moveTopBottom {
