@@ -1,3 +1,5 @@
+import { SectionProjects } from "@/components/molecules";
+
 export default function ProjectView(): React.ReactNode {
-  return <div>Project view</div>;
+  return <SectionProjects />;
 }
