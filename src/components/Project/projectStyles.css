@@ -1,4 +1,6 @@
 .project {
   border: 1px solid red;
   border-radius: var(--border-radius-small);
+  height: 500px;
+  width: 500px;
 }

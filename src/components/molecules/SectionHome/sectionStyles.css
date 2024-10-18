@@ -40,7 +40,7 @@
 
 .section-home > div.home-right > div.right-image > img {
   width: 100%;
-  animation: moveTopBottom 2s infinite;
+  animation: moveTopBottom 4s infinite;
 }
 
 /*Styles for comments  right */
@@ -54,7 +54,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: moveTopBottom 2.1s infinite reverse;
+  animation: moveTopBottom 4.1s infinite reverse;
 }
 .section-home > div.home-right > div.comment-html:hover::after,
 .section-home > div.home-right > div.comment-css:hover::after,
